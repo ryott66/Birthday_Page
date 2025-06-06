@@ -1,17 +1,73 @@
 <!DOCTYPE html>
-<html lang = "ja">
-    
+<html lang="ja">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Remina's Birthday</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!--アイコン-->
+    <link href="https://fonts.cdnfonts.com/css/happybirthday" rel="stylesheet"> <!--おしゃれフォント-->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;1000&display=swap" rel="stylesheet">
+    <!--おしゃれフォント-->
+
     <link rel="stylesheet" href="index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js" defer></script>
+    <!--クラッカー-->
+    <!--index.jsで使うからその前に定義-->
     <script src="index.js" defer></script>
+
 </head>
 
 <body>
-  <h1>Remina's Birthday</h1>
-  <p id="countdown">読み込み中...</p>
+    <header>
+        <div class="header-left">
+            <i class="fa-solid fa-cake-candles cake-icon"></i>
+        </div>
+        <div class="header-right">
+            <a href="#first">Remina's Birthday</a>
+        </div>
+        <nav>
+            <a href="#countdown" class="header-btn">Countdown</a>
+            <a href="#memories" class="header-btn">Memories</a>
+            <a href="#trip" class="header-btn">Trip</a>
+        </nav>
+    </header>
+
+    <div class="main">
+        <h1 id="first">Ryo & Remina</h1>
+        <p id="countdown">読み込み中...</p>
+
+    </div>
+
+    <div id="memories">
+        <h2 class="memory-title">Memories</h2>
+        <div class="memory-gallery">
+            <img src="./images/memory1.JPEG" alt="Memory 1">
+            <img src="./images/memory2.JPEG" alt="Memory 2">
+            <img src="./images/memory3.JPEG" alt="Memory 3">
+            <img src="./images/memory4.JPEG" alt="Memory 4">
+            <img src="./images/memory5.JPEG" alt="Memory 5">
+            <img src="./images/memory6.JPEG" alt="Memory 6">
+            <img src="./images/memory7.JPEG" alt="Memory 7">
+            <img src="./images/memory8.JPEG" alt="Memory 8">
+            <img src="./images/memory9.JPEG" alt="Memory 9">
+            <img src="./images/memory10.JPEG" alt="Memory 10">
+            <img src="./images/memory11.JPEG" alt="Memory 11">
+            <img src="./images/memory12.JPEG" alt="Memory 12">
+            <img src="./images/memory13.JPEG" alt="Memory 13">
+            <img src="./images/memory14.JPEG" alt="Memory 14">
+            <img src="./images/memory15.JPEG" alt="Memory 15">
+            <img src="./images/memory16.JPEG" alt="Memory 16">
+            <img src="./images/memory17.JPEG" alt="Memory 17">
+
+        </div>
+    </div>
+
+    <div id="trip">
+
+
+    </div>
+
 </body>
 
 </html>
