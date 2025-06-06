@@ -61,14 +61,14 @@ header {
     float: right;
     transition: all 0.5s;
     /*hoverしたときとかに状態が変わるための時間*/
-    margin-top:1rem;
+    margin-top: 1rem;
     margin-right: 2rem;
 }
 
 .header-right a {
     color: #e68ab6;
     font-size: 2rem;
-    font-weight:bold;
+    font-weight: bold;
     opacity: 0.8;
 }
 
@@ -161,5 +161,77 @@ header {
 }
 
 #trip {
-    height: 60rem;
+    height: 50rem;
+    margin:  0rem;
+    background-image: url("./images/background_trip.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+        /* background-color:rgba(200, 254, 228, 0.7); */
+}
+
+.trip-title {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 4.5rem;
+    /* colors: rgba(255, 255, 255, 0.9); */
+    color: rgba(0, 0, 0, 0.8);
+    padding-top: 6rem;
+}
+
+.trip-message {
+    text-align: center;
+    font-style: italic;
+    font-family: 'Dancing Script', cursive;
+    margin: 0 8rem;
+    padding: 2rem;
+    line-height: 1.8;
+}
+
+.coming-soon {
+    font-size: 5rem;
+    color: rgba(0, 0, 0, 0.8);
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}
+
+footer {
+    height: 12rem;
+    padding-top: 3rem;
+
+}
+
+.footer-left{
+    font-size:5rem;
+    color:rgb(250, 103, 145);
+    margin-left: 4rem;
+    float: left;
+
+}
+
+.footer-right{
+    font-size:2.5rem;
+    padding-top:2rem;
+    padding-left:5rem;
+    float: left;
+    color:rgb(254, 139, 181);
+
+}
+
+.footer-end{
+    font-size:2rem;
+    font-family: 'Dancing Script', cursive;
+    margin-top:7rem;
+    margin-right:3rem;
+    float:right;
 }
