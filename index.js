@@ -1,5 +1,7 @@
 
-const birthday = new Date("2025-06-07");
+// const birthday = new Date("2025-06-08"); //UTCになっちゃう
+const birthday = new Date("2025-06-28T00:00:00"); //日本時間
+
 const countdownEl = document.getElementById("countdown");
 
 let hasCelebrated = false;  // 🎉 クラッカーを1回だけ表示するためのフラグ
