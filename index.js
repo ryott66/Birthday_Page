@@ -1,5 +1,4 @@
 
-
 const birthday = new Date("2025-06-28");
 const countdownEl = document.getElementById("countdown");
 

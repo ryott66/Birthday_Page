@@ -2,6 +2,23 @@
     scroll-behavior: smooth;
 } */
 
+/* 
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+文字サイズをremにしておけば、HTMLのフォントサイズに合わせて小さくなる
+⇒スマホ表示用に、html font-sizeだけ変更するように作ればOK
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+*/
+@media (max-width: 768px) {
+    html {
+        font-size: 7px;
+    }
+
+    header nav {
+        display: none;
+        /* スマホではタイトルだけ残すなら非表示にしてもOK */
+    }
+}
+
 body {
     background-color: #fff0f5;
     font-family: sans-serif;
@@ -133,10 +150,10 @@ header {
 }
 
 #memories {
-    margin-top:10rem;
+    margin-top: 10rem;
     height: 133rem;
     text-align: center;
-    width:85%;
+    width: 85%;
     margin: 0 auto;
 }
 
@@ -144,16 +161,17 @@ header {
     font-family: 'Dancing Script', cursive;
     color: rgb(230, 138, 182, 0.8);
     font-size: 5rem;
-    padding-top:8rem;
-    padding-bottom:3rem;
+    padding-top: 8rem;
+    padding-bottom: 3rem;
 
 }
 
-.galleries{
+.galleries {
     background: linear-gradient(90deg, #b39855 0%, #fff9e6 50%, #b39855 100%);
-    border: 0.7rem solid #c9c9c9;  /* 太さ2px、実線、色は濃いグレー */
-    padding:1rem 1rem 3rem 1rem;
-    margin-bottom:8rem;
+    border: 0.7rem solid #c9c9c9;
+    /* 太さ2px、実線、色は濃いグレー */
+    padding: 1rem 1rem 3rem 1rem;
+    margin-bottom: 8rem;
 }
 
 .gallery-title {
@@ -175,17 +193,17 @@ header {
     border: 0.25rem solid rgb(128, 128, 128);
     border-radius: 1rem;
     scroll-snap-align: start;
-    
+
 
 }
 
 #trip {
     height: 50rem;
-    margin:  0rem;
+    margin: 0rem;
     background-image: url("./images/background_trip.png");
     background-size: cover;
     background-repeat: no-repeat;
-        /* background-color:rgba(200, 254, 228, 0.7); */
+    /* background-color:rgba(200, 254, 228, 0.7); */
 }
 
 .trip-title {
@@ -230,9 +248,9 @@ footer {
 
 }
 
-.footer-left{
-    font-size:5rem;
-    color:rgb(249, 119, 156);
+.footer-left {
+    font-size: 5rem;
+    color: rgb(249, 119, 156);
     margin-left: 5rem;
     float: left;
 
@@ -247,19 +265,19 @@ footer {
     transform: scale(1.1);
 }
 
-.footer-right{
-    font-size:2.5rem;
-    padding-top:2rem;
-    padding-left:5rem;
+.footer-right {
+    font-size: 2.5rem;
+    padding-top: 2rem;
+    padding-left: 5rem;
     float: left;
-    color:rgb(254, 139, 181);
+    color: rgb(254, 139, 181);
 
 }
 
-.footer-end{
-    font-size:2rem;
+.footer-end {
+    font-size: 2rem;
     font-family: 'Dancing Script', cursive;
-    margin-top:7rem;
-    margin-right:3rem;
-    float:right;
+    margin-top: 7rem;
+    margin-right: 3rem;
+    float: right;
 }
