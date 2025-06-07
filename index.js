@@ -70,7 +70,6 @@ function updateCountdown() {
     countdownEl.innerHTML =
         `Countdown to Birthday : <br><span class="cdtime"> ${days} days ${pad(hours)}:${pad(minutes)}:${pad(seconds)}</span>`;
 
-
 }
 
 // 実行
@@ -78,10 +77,9 @@ updateCountdown();
 setInterval(updateCountdown, 1000);
 
 
-
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        //eはイベントオブジェクトいい、JavaScriptのイベント処理では、関数が自動的にイベントの情報を受け取る
+        //eはイベントオブジェクトといい、JavaScriptのイベント処理では、関数が自動的にイベントの情報を受け取る
         //eのメンバには、e.target：クリックされた要素そのもの、e.type："click" とか "submit"、e.preventDefault()：デフォルト動作を止める（リンクのジャンプなど）
         e.preventDefault();
 
@@ -117,3 +115,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
+//------heart_movement
+const heart = document.getElementById("heart"); //heartという定数にDOM取得
+
+heart.addEventListener("click", function() { //DOMに対してadd_Event : click時のfunction
+    heart.classList.add("clicked");  //classlistは、CSSに追加　#heart.clickedでアクセス
+    setTimeout(() => heart.classList.remove("clicked"), 150); // 0.3秒後に戻す
+});
