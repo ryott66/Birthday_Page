@@ -119,6 +119,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const heart = document.getElementById("heart"); //heartという定数にDOM取得
 
 heart.addEventListener("click", function() { //DOMに対してadd_Event : click時のfunction
-    heart.classList.add("clicked");  //classlistは、CSSに追加　#heart.clickedでアクセス
-    setTimeout(() => heart.classList.remove("clicked"), 150); // 0.3秒後に戻す
+    //まず一回
+    heart.classList.add("bigheart");
+    setTimeout(() => heart.classList.remove("bigheart"), 200);
+
+    //ここから繰り返し
+    const stop_id = setInterval(() => {   //0.8秒ごとに繰り返し、clearInterval(stop_id)が来たらおわり
+        heart.classList.add("bigheart"); //classlistは、CSSに追加　#heart.clickedでアクセス
+        setTimeout(() => heart.classList.remove("bigheart"), 200); //0.2秒後にremove
+    }, 600);
+    setTimeout(() => clearInterval(stop_id), 1200);
 });

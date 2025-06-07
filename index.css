@@ -211,13 +211,17 @@ footer {
 
 .footer-left{
     font-size:5rem;
-    color:rgb(250, 103, 145);
-    margin-left: 4rem;
+    color:rgb(249, 119, 156);
+    margin-left: 5rem;
     float: left;
 
 }
 
-#heart.clicked {
+#heart {
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+#heart.bigheart {
     color: rgb(246, 73, 128);
     transform: scale(1.1);
 }
