@@ -94,7 +94,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
         let startTime = null;
 
-        //requestAnimationFrameの引数になるが、この関数内でまたrequestAnimaionFrameを呼ぶことで繰り返しコマ送りでアニメーションを作成
+        //requestAnimationFrameの引数になるが、この関数内でまたrequestAnimationFrameを呼ぶことで繰り返しコマ送りでアニメーションを作成
         function scrollStep(timestamp) { //timestampは、実行時はブラウザが自動で呼ぶ。今は引数名としてtimestampが書いてある
             if (!startTime) startTime = timestamp;
             const progress = timestamp - startTime;
@@ -125,8 +125,8 @@ heart.addEventListener("click", function() { //DOMに対してadd_Event : click�
     setTimeout(() => heart.classList.remove("bigheart"), 200);
 
     //ここから繰り返し
-    const stop_id = setInterval(() => {   //0.8秒ごとに繰り返し、clearInterval(stop_id)が来たらおわり
-        heart.classList.add("bigheart"); //classlistは、CSSに追加　#heart.clickedでアクセス
+    const stop_id = setInterval(() => {   //0.6秒ごとに繰り返し、clearInterval(stop_id)が来たらおわり
+        heart.classList.add("bigheart"); //classlistは、CSSに追加　#heart.bigheartでアクセス
         setTimeout(() => heart.classList.remove("bigheart"), 200); //0.2秒後にremove
     }, 600);
     setTimeout(() => clearInterval(stop_id), 1200);
