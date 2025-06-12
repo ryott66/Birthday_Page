@@ -1,6 +1,6 @@
 
 // const birthday = new Date("2025-06-08"); //UTCになっちゃう
-const birthday = new Date("2025-06-12T00:00:00"); //日本時間
+const birthday = new Date("2025-06-28T00:00:00"); //日本時間
 // const birthday = new Date(2025, 6, 12); // ✅ 6月12日（0:00 JST）
 
 
