@@ -76,9 +76,6 @@ header {
     margin: 0 4rem;
 }
 
-/* .header-btn{
-    margin-left:8rem;
-} */
 
 .header-right {
     float: left;
@@ -152,7 +149,7 @@ header {
     font-family: "HappyBirthday";
     font-size: 12rem;
     font-weight: 100;
-    color: #2f7a91;
+    color: rgb(200, 247, 255);
 }
 
 #memories {

@@ -1,6 +1,8 @@
 
 // const birthday = new Date("2025-06-08"); //UTCになっちゃう
-const birthday = new Date("2025-06-28T00:00:00"); //日本時間
+const birthday = new Date("2025-06-12T00:00:00"); //日本時間
+// const birthday = new Date(2025, 6, 12); // ✅ 6月12日（0:00 JST）
+
 
 const countdownEl = document.getElementById("countdown");
 
@@ -37,15 +39,18 @@ function launchConfetti() {
 }
 
 
+
 function updateCountdown() {
     const now = new Date();
 
-    // 年月日だけ比較用に抽出
-    const todayStr = now.toISOString().slice(0, 10);        // "2025-06-28"
-    const birthdayStr = birthday.toISOString().slice(0, 10); // "2025-06-28"
+    const isToday = (
+        now.getFullYear() === birthday.getFullYear() &&
+        now.getMonth() === birthday.getMonth() &&
+        now.getDate() === birthday.getDate()
+    );
 
     // 🎉 誕生日当日
-    if (todayStr === birthdayStr) {
+    if (isToday) {
         countdownEl.innerHTML = `🎉 <span class="birthday-script">Happy Birthday</span> 🎉
                                     <br> <span class="birthday-script">　 Remina</span> <span class="birthday-num">23</span> `;
 
@@ -119,7 +124,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 //------heart_movement
 const heart = document.getElementById("heart"); //heartという定数にDOM取得
 
-heart.addEventListener("click", function() { //DOMに対してadd_Event : click時のfunction
+heart.addEventListener("click", function () { //DOMに対してadd_Event : click時のfunction
     //まず一回
     heart.classList.add("bigheart");
     setTimeout(() => heart.classList.remove("bigheart"), 200);
